@@ -15,8 +15,8 @@ $(document).ready(function(){
     data:'tags='+bla+'&tagmode=any&format=json',
     success:function(data){
     $.each(data.items, function(i,item){
-                $("<img/>").attr("src", item.media.m).appendTo("#images");
-                if ( i == 6 ) return false ; });
+                $("<img>").attr("src", item.media.m).appendTo("#images");
+                if ( i == 3 ) return false ; });
               },
     error: function(resultat,statut,erreur){
     alert("erreur");},
