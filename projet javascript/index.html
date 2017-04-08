@@ -6,6 +6,19 @@
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- Import css -->
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/css/main.css">
+    <link rel="stylesheet" href="style/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+
+    <!-- Import JS -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="style/js/main.js"></script>
+    <script type="text/javascript" src="style/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,11 +27,44 @@
     <input type="text" id="searchBox" autocomplete="off"
       class="search-field" autoFocus />
     <ul id="searchResults" class="term-list hidden"></ul>
-    <div id="images" style="height: 300px"></div>
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/image.js"></script>
-    <button id="bouton1">Lancer</button>
-</form>
+
+
+    <div class="form-group">
+        <button id="bouton1" class="btn btn-lg btn-default glyphicon glyphicon-search"></button>
+    </div>
+
+
+    <div id="tabs" style="position:absolute;overflow-y: scroll;  height: 100%;" >
+  <ul style="text-align : center;">
+    <li><a href="#tabs-1">Vue photo</a></li>
+    <li><a href="#tabs-2">Vue table</a></li>
+  </ul>
+  <div id="tabs-1">
+  </div>
+  <div id="tabs-2">
+    <table>
+      <thead>
+      <tr>
+        <td>photo </td>
+        <td>nom </td>
+        <td>heure de prise de vue </td>
+        <td>identifiant du photographe </td>
+      </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td>photo </td>
+          <td>nom </td>
+          <td>heure de prise de vue </td>
+          <td>identifiant du photographe </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
 
   </body>
 </html>

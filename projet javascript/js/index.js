@@ -102,5 +102,11 @@ var clearResults = function() {
     ul.innerHTML = '';
 };
 
+$( function() {
+  $( "#tabs" ).tabs();
+  $( "#tabs" ).hide();
+
+} );
+
 
 input.addEventListener("keyup", search, false);
