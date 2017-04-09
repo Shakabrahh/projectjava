@@ -26,13 +26,14 @@
   <body>
 
     <h1 class="title">Recherche</h1>
-
+    <!-- outil de recherche  -->
     <input type="text" id="searchBox" autocomplete="off"
      class="search-field" autoFocus />
     <ul id="searchResults" class="term-list hidden"></ul>
+    <!-- import de fichier locaux  -->
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/image.js"></script>
-
+    <!-- Partie recherche de la date  -->
     <input type="date" id="dt" onchange="mydate1();" hidden/>
     <input type="text" id="ndt"  onclick="mydate();" hidden />
     <input type="button" class="btn btn-primary" Value="Date" onclick="mydate();" />
@@ -41,16 +42,18 @@
         <button id="bouton1" class="btn btn-lg btn-default glyphicon glyphicon-search"></button>
     </div>
 
-
+    <!-- Partie affichage des onglets  -->
     <div id="tabs" style="position:absolute;overflow-y: scroll;  width:100%" >
   <ul style="text-align : center;">
     <li><a href="#tabs-1">Vue photo</a></li>
     <li><a href="#tabs-2">Vue table</a></li>
   </ul>
+  <!-- onglet photo  -->
   <div id="tabs-1">
 
 
   </div>
+  <!-- onglet tableau, configuration du tableau vide  -->
   <div id="tabs-2">
     <table>
       <thead>
@@ -73,7 +76,9 @@
     </table>
   </div>
 </div>
+  <!-- import d'un script local pour l'affichage "propre" des images  -->
   <script src="js/jquery.justifiedGallery.min.js"></script>
+  <!-- la bulle de dialogue, mis-à jour lors d'un clic sur image  -->
   <div id="dialog" title="Dialog Title">
 
   </div>
