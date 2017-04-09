@@ -68,11 +68,13 @@ function getInfoImage(id_img, url) {
     data: 'api_key=671aab1520e2cb69e08dd36a5f40213b&tagmode=any&format=json&photo_id=' + id_img,
     success: function(data) {
       var t = $("table").DataTable();
+
+      // récupération et comparaison des dates
       var startDate = $('#dt').val();
       var actualDate1 = (data.photo.dates.taken).split(" ")[0];
       var actualDate = String(actualDate1).replace('-', '/');
 
-      if ((startDate == "") || (startDate < actualDate)) {
+      if ((startDate == "") || (new Date(startDate).getTime() < new Date(actualDate).getTime())) {
         // Vue tableau --> #tabs-2
         t.row.add(
           ["<img src=" + url + ">", data.photo.title._content, data.photo.dates.taken, data.photo.owner.nsid]
